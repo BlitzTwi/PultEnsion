@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — PultEnsion</title>
+    <meta
+      name="description"
+      content="PultEnsion privacy policy: no servers, no analytics, no network requests. Everything stays in your own browser."
+    />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="site.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap top__inner">
+        <a class="brand" href="index.html">
+          <svg width="26" height="26" viewBox="0 0 128 128" aria-hidden="true">
+            <path
+              fill="var(--brand-body)"
+              d="M24 24 H58 V20 A9 9 0 1 1 70 20 V24 H104 V58 H108 A9 9 0 1 1 108 70 H104 V104 H73 A9 9 0 0 0 55 104 H24 V73 A9 9 0 0 0 24 55 V24 Z"
+            />
+            <g stroke="var(--brand-track)" stroke-width="6" stroke-linecap="round">
+              <line x1="44" y1="46" x2="44" y2="90" />
+              <line x1="64" y1="46" x2="64" y2="90" />
+              <line x1="84" y1="46" x2="84" y2="90" />
+            </g>
+            <g fill="var(--brand-knob)">
+              <circle cx="44" cy="62" r="7" />
+              <circle cx="64" cy="78" r="7" />
+              <circle cx="84" cy="54" r="7" />
+            </g>
+          </svg>
+          <span class="brand__name">PultEnsion</span>
+        </a>
+        <nav class="nav">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap doc">
+      <h1>Privacy Policy</h1>
+      <div class="doc__meta">
+        <div><strong>Effective date:</strong> 16 August 2026</div>
+        <div>
+          <strong>Applies to:</strong> PultEnsion, a Chrome browser extension
+          (version 1.0.0 and later)
+        </div>
+        <div>
+          <strong>Contact:</strong>
+          <a href="mailto:blitztwi@gmail.com">blitztwi@gmail.com</a>
+        </div>
+      </div>
+
+      <h2>Short version</h2>
+      <p>
+        PultEnsion has no servers, no accounts and no analytics. While it is
+        installed it makes no network requests at all. Everything it stores stays
+        inside your own browser, and nothing is ever sent to the developer or to
+        any third party.
+      </p>
+      <p>
+        There is exactly one exception, and it happens only after you remove the
+        extension: Chrome opens a short, entirely optional feedback form. See
+        <a href="#uninstall">After you uninstall</a>.
+      </p>
+
+      <h2>What PultEnsion stores</h2>
+      <p>
+        PultEnsion needs to remember your setup in order to work. All of it is
+        written through Chrome’s own <code>chrome.storage</code> API:
+      </p>
+
+      <h3>
+        In <code>chrome.storage.sync</code> — Chrome may copy this between your
+        own signed-in Chrome profiles
+      </h3>
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Why it is needed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Group names you type</td>
+              <td>To label your groups in the popup</td>
+            </tr>
+            <tr>
+              <td>The Chrome extension IDs you place in a group</td>
+              <td>To know what a group’s switch should turn off</td>
+            </tr>
+            <tr>
+              <td>The Chrome extension IDs you mark “Always on”</td>
+              <td>To make sure those are never switched off</td>
+            </tr>
+            <tr>
+              <td>Your appearance choice (system / light / dark)</td>
+              <td>To render the interface you picked</td>
+            </tr>
+            <tr>
+              <td>The list filter you last used</td>
+              <td>To reopen the popup the way you left it</td>
+            </tr>
+            <tr>
+              <td>A timestamp recording that the welcome tour was shown</td>
+              <td>So the tour does not open again</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>In <code>chrome.storage.local</code> — this device only, never synced</h3>
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Why it is needed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                The extension IDs that were enabled just before you switched a
+                group or the master switch off
+              </td>
+              <td>
+                So that switching back on restores exactly your previous setup
+                instead of enabling everything
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        That is the complete list. PultEnsion does not read, collect, store or
+        transmit:
+      </p>
+      <ul>
+        <li>
+          your browsing history, the URLs you visit, or the content of any page;
+        </li>
+        <li>
+          personally identifiable information — no name, e-mail address, account
+          or device identifier;
+        </li>
+        <li>
+          authentication data, cookies, form input, financial or health
+          information;
+        </li>
+        <li>any file on your computer;</li>
+        <li>
+          usage statistics, telemetry, crash reports or advertising identifiers.
+        </li>
+      </ul>
+      <p>
+        PultEnsion contains no third-party code, no SDKs, no trackers and no
+        remote code. It does not run on web pages: it has no content scripts and
+        no access to website data.
+      </p>
+
+      <h2>What PultEnsion does with the <code>management</code> permission</h2>
+      <p>
+        The <code>management</code> permission lets PultEnsion read the list of
+        extensions installed in your browser (name, icon, ID, enabled state) and
+        switch extensions on and off when you ask it to. That list is used only
+        to draw the popup and to carry out your clicks. It is never copied out of
+        the browser.
+      </p>
+      <p>
+        PultEnsion never disables an extension installed by your organisation’s
+        policy, never touches themes or Chrome apps, and never disables itself.
+      </p>
+
+      <h2>Chrome sync</h2>
+      <p>
+        If you have Chrome sync switched on, Google copies
+        <code>chrome.storage.sync</code> data between your signed-in Chrome
+        profiles. That transfer is performed by Chrome itself under
+        <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>;
+        the developer of PultEnsion has no access to it and receives nothing from
+        it. The record of “what was on before” is deliberately kept in local
+        storage only, because it describes one specific computer.
+      </p>
+
+      <h2>Data retention and deletion</h2>
+      <ul>
+        <li>
+          Deleting a group or removing an “Always on” star deletes that data
+          immediately.
+        </li>
+        <li>
+          Uninstalling PultEnsion removes its stored data from your browser. If
+          Chrome sync is on, the removal propagates to your other signed-in
+          profiles.
+        </li>
+        <li>
+          There is nothing for the developer to delete, because the developer
+          never receives your data.
+        </li>
+      </ul>
+
+      <h2 id="uninstall">After you uninstall</h2>
+      <p>
+        When you remove PultEnsion, Chrome opens one page in a new tab: a short
+        feedback form, hosted on Google Forms, asking why you removed it. It is
+        the only way the developer can hear from the people who left.
+      </p>
+      <ul>
+        <li><strong>Answering is voluntary.</strong> Closing the tab sends nothing.</li>
+        <li>
+          <strong>The extension sends nothing.</strong> It is already uninstalled
+          by then. Chrome itself opens the address, registered in advance through
+          <code>chrome.runtime.setUninstallURL</code>, and nothing from your
+          groups, your “Always on” list or your settings is attached to it.
+        </li>
+        <li>
+          <strong>If you do answer</strong>, your answers go to Google Forms and
+          are then covered by
+          <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>
+          as well as this one. The form does not ask for your name or your e-mail
+          address; please do not type anything into it you would rather not share.
+        </li>
+        <li>
+          Answers are read only to decide what to improve. They are never sold,
+          never shared and never used for advertising.
+        </li>
+      </ul>
+
+      <h2>Limited Use disclosure</h2>
+      <p>
+        PultEnsion complies with the
+        <a
+          href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq"
+          >Chrome Web Store User Data Policy</a
+        >, including the Limited Use requirements:
+      </p>
+      <ul>
+        <li>
+          <strong>Allowed use.</strong> The data described above is used only to
+          provide the extension’s single purpose — switching groups of extensions
+          off and back on.
+        </li>
+        <li>
+          <strong>Allowed transfer.</strong> No user data is transferred to
+          anyone. There is no server, no third-party service and no export of
+          data by the extension.
+        </li>
+        <li>
+          <strong>Prohibited advertising.</strong> No data is used or transferred
+          for advertising, personalisation, re-targeting or interest-based
+          profiling.
+        </li>
+        <li>
+          <strong>Prohibited human interaction.</strong> No human, including the
+          developer, can read your data: it never leaves your browser.
+        </li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>
+        PultEnsion is a general-purpose developer/productivity tool. It is not
+        directed at children and collects no data from anyone, of any age.
+      </p>
+
+      <h2>Security</h2>
+      <p>
+        Because no data leaves your device, there is no transmission to secure.
+        Local data is protected by Chrome’s own extension storage isolation: no
+        website and no other extension can read PultEnsion’s storage.
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        If a future version of PultEnsion changes what it stores, this policy will
+        be updated before that version is published, and the effective date above
+        will change. Material changes will also be summarised in the extension’s
+        Chrome Web Store listing.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about this policy:
+        <a href="mailto:blitztwi@gmail.com">blitztwi@gmail.com</a>
+      </p>
+
+      <a class="back" href="index.html">← Back to PultEnsion</a>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot__inner">
+        <span>© 2026 PultEnsion. Not affiliated with Google LLC.</span>
+        <span><a href="terms.html">Terms of use</a></span>
+      </div>
+    </footer>
+  </body>
+</html>

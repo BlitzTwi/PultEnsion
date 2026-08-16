@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PultEnsion — one switch for a whole group of extensions</title>
+    <meta
+      name="description"
+      content="PultEnsion is a Chrome extension that turns a whole group of your extensions off with one click, and brings back exactly what was on before."
+    />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="site.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap top__inner">
+        <a class="brand" href="index.html">
+          <svg width="26" height="26" viewBox="0 0 128 128" aria-hidden="true">
+            <path
+              fill="var(--brand-body)"
+              d="M24 24 H58 V20 A9 9 0 1 1 70 20 V24 H104 V58 H108 A9 9 0 1 1 108 70 H104 V104 H73 A9 9 0 0 0 55 104 H24 V73 A9 9 0 0 0 24 55 V24 Z"
+            />
+            <g stroke="var(--brand-track)" stroke-width="6" stroke-linecap="round">
+              <line x1="44" y1="46" x2="44" y2="90" />
+              <line x1="64" y1="46" x2="64" y2="90" />
+              <line x1="84" y1="46" x2="84" y2="90" />
+            </g>
+            <g fill="var(--brand-knob)">
+              <circle cx="44" cy="62" r="7" />
+              <circle cx="64" cy="78" r="7" />
+              <circle cx="84" cy="54" r="7" />
+            </g>
+          </svg>
+          <span class="brand__name">PultEnsion</span>
+        </a>
+        <nav class="nav">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap">
+        <section class="hero">
+          <span class="tag">Coming to the Chrome Web Store</span>
+          <h1>One switch for a whole group of extensions.</h1>
+          <p class="lead">
+            Most extensions only matter on one site, or for one task. PultEnsion
+            lets you group them — “YouTube”, “Work”, “Dev tools” — and switch the
+            whole group off with a single click. Switch it back on and you get
+            exactly what was on before, not everything you have ever installed.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--ghost" href="#how">How it works</a>
+            <a class="btn btn--ghost" href="privacy.html">Privacy policy</a>
+          </div>
+
+          <div class="mock" aria-hidden="true">
+            <div class="mock__row mock__row--master">
+              <span class="mock__text">
+                <span class="mock__title">All extensions</span>
+                <span class="mock__meta">16 of 20 on</span>
+              </span>
+              <span class="sw sw--lg sw--mixed"></span>
+            </div>
+            <div class="mock__row">
+              <span class="dot dot--rose"></span>
+              <span class="mock__text">
+                <span class="mock__title">YouTube</span>
+                <span class="mock__meta">All 3 off</span>
+              </span>
+              <span class="sw"></span>
+            </div>
+            <div class="mock__row">
+              <span class="dot dot--sky"></span>
+              <span class="mock__text">
+                <span class="mock__title">Work</span>
+                <span class="mock__meta">5 on · 1 pinned</span>
+              </span>
+              <span class="sw sw--on"></span>
+            </div>
+            <div class="mock__row">
+              <span class="dot dot--emerald"></span>
+              <span class="mock__text">
+                <span class="mock__title">Dev tools</span>
+                <span class="mock__meta">2 of 4 on</span>
+              </span>
+              <span class="sw sw--mixed"></span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>What it does</h2>
+          <div class="cards">
+            <div class="card">
+              <h3>Groups</h3>
+              <p>
+                Name a group, drop your extensions into it, and one switch
+                handles the whole set. Colour dots keep the list readable.
+              </p>
+            </div>
+            <div class="card">
+              <h3>A master switch that remembers</h3>
+              <p>
+                Quiet everything at once. Switching back on restores the exact
+                set that was running — anything you had disabled yourself stays
+                disabled.
+              </p>
+            </div>
+            <div class="card">
+              <h3>“Turn all on”</h3>
+              <p>
+                A separate, explicit action for the moment you really do want
+                every extension enabled. It never happens by accident.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Always on</h3>
+              <p>
+                Star a password manager or a content blocker and nothing can
+                switch it off — not a group, not the master switch.
+              </p>
+            </div>
+            <div class="card">
+              <h3>A badge you can trust</h3>
+              <p>
+                The toolbar badge counts how many extensions PultEnsion is
+                currently holding off, so you never forget you left something
+                disabled.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Search, filters, dark mode</h3>
+              <p>
+                Filter by on, off or ungrouped, search by name, and match your
+                system theme. Full keyboard navigation.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="how">
+          <h2>How it works</h2>
+          <ol class="steps">
+            <li><strong>Open the popup</strong> from the toolbar icon.</li>
+            <li>
+              <strong>Create a group</strong> and tick the extensions that belong
+              in it.
+            </li>
+            <li>
+              <strong>Click the group’s switch.</strong> Only its members are
+              disabled — PultEnsion notes which ones were running first.
+            </li>
+            <li>
+              <strong>Click it again</strong> and exactly those come back.
+            </li>
+          </ol>
+        </section>
+
+        <section id="privacy">
+          <h2>Privacy, in one paragraph</h2>
+          <div class="panel">
+            <p>
+              PultEnsion has no servers, no accounts and no analytics. While it
+              is installed it makes no network requests at all, contains no
+              third-party code, and runs on no web page — it has no content
+              scripts and no access to the sites you visit. Your groups are
+              stored by your own browser. The single exception comes after you
+              remove it: Chrome opens one optional feedback form, and answering
+              it is entirely up to you.
+            </p>
+            <p>
+              It asks for two permissions and nothing else:
+              <strong>management</strong>, because switching extensions on and
+              off is not possible without it, and <strong>storage</strong>, to
+              remember the groups you made. It never disables extensions
+              installed by your organisation, never touches themes or Chrome
+              apps, and never disables itself.
+            </p>
+            <p class="linkrow">
+              <a href="privacy.html">Read the full privacy policy</a>
+              <a href="terms.html">Terms of use</a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot__inner">
+        <span>© 2026 PultEnsion. Not affiliated with Google LLC.</span>
+        <span><a href="mailto:blitztwi@gmail.com">blitztwi@gmail.com</a></span>
+      </div>
+    </footer>
+  </body>
+</html>
